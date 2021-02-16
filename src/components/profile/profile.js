@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { DesktopOnly, MobileOnly } from "../utils/mobile";
-import { Button } from "./button";
+import { DesktopOnly, MobileOnly } from "../../utils/mobile";
+import { Button } from "../button";
+import { KeyNumber } from "./key-number";
 
 const Header = styled.header`
   margin-bottom: 44px;
@@ -70,14 +71,6 @@ const ProfileTitle = styled.div`
   }
 `;
 
-const ProfileDetailLi = styled.li`
-  font-size: 16px;
-  font-weight: 400;
-  margin-right: 40px;
-`;
-const ProfileDetailSpan = styled.span`
-  font-weight: 600;
-`;
 const ProfileDetailUl = styled.ul`
   display: flex;
 `;
@@ -130,15 +123,9 @@ export function Profile() {
           <DesktopOnly>
             <ProfileRow>
               <ProfileDetailUl>
-                <ProfileDetailLi>
-                  <ProfileDetailSpan>722</ProfileDetailSpan> posts
-                </ProfileDetailLi>
-                <ProfileDetailLi>
-                  <ProfileDetailSpan>25.1m</ProfileDetailSpan> followers
-                </ProfileDetailLi>
-                <ProfileDetailLi>
-                  <ProfileDetailSpan>6</ProfileDetailSpan> following
-                </ProfileDetailLi>
+                <KeyNumber label="posts" number={722} />
+                <KeyNumber label="followers" number="25.1m" />
+                <KeyNumber label="following" number={6} />
               </ProfileDetailUl>
             </ProfileRow>
             <ProfileDescriptions

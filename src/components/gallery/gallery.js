@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { data } from "./data";
+import { GalleryItem } from "./gallery-item";
 
 const Grid = styled.div`
   display: grid;
@@ -9,23 +11,14 @@ const Grid = styled.div`
     gap: 3px;
   }
 `;
-const GalleryItem = styled.div`
-  position: relative;
-`;
-const Img = styled.img`
-  width: 100%;
-  display: block;
-`;
-const Icon = styled.span`
-  position: absolute;
-  top: 0px;
-  right: 0px;
-`;
 
 export function Gallery() {
   return (
     <Grid>
-      <GalleryItem>
+      {data.map((item, id) => (
+        <GalleryItem key={id} imagePath={item.imagepath} icon={item.icon} />
+      ))}
+      {/* <GalleryItem>
         <Img alt="gallery-post" src="/images/gallery-1.jpg" />
         <Icon>
           <span className="media-icon"></span>
@@ -54,7 +47,7 @@ export function Gallery() {
         <Icon>
           <span className="media-icon"></span>
         </Icon>
-      </GalleryItem>
+      </GalleryItem> */}
     </Grid>
   );
 }
