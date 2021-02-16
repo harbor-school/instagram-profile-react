@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Gallery } from "./components/gallery";
-import { MobileTabs } from "./components/mobile-tabs";
+import { KeyNumbers } from "./components/key-numbers";
 import { Navigation } from "./components/navigation";
 import { Profile } from "./components/profile";
 import { Story } from "./components/story";
 import { Tabs } from "./components/tabs";
 import "./styles.css";
-import { DesktopOnly, MobileOnly } from "./utils/mobile";
+import { MobileOnly } from "./utils/mobile";
 
 const Main = styled.main`
   padding: 30px 20px 0px 20px;
@@ -25,12 +25,10 @@ export default function App() {
       <Main>
         <Profile />
         <Story />
-        <DesktopOnly>
-          <Tabs />
-        </DesktopOnly>
         <MobileOnly>
-          <MobileTabs />
+          <KeyNumbers />
         </MobileOnly>
+        <Tabs />
         <Gallery />
       </Main>
     </>

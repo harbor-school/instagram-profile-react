@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { DesktopOnly, MobileOnly } from "../../utils/mobile";
-import { Button } from "../button";
-import { KeyNumber } from "./key-number";
+import { DesktopOnly, MobileOnly } from "../utils/mobile";
+import { Button } from "./button";
+import { KeyNumbers } from "./key-numbers";
+import * as Icons from "./icons";
 
 const Header = styled.header`
   margin-bottom: 44px;
@@ -71,9 +72,6 @@ const ProfileTitle = styled.div`
   }
 `;
 
-const ProfileDetailUl = styled.ul`
-  display: flex;
-`;
 const ProfileDescriptionH1 = styled.h1`
   font-weight: 600;
   line-height: 24px;
@@ -114,7 +112,9 @@ export function Profile() {
           <ProfileRow>
             <ProfileTitle>
               <ProfileH2>apple</ProfileH2>
-              <ProfileIcon className="verfied-icon"></ProfileIcon>
+              <ProfileIcon>
+                <Icons.Verified />
+              </ProfileIcon>
               <ProfileButtonWrap>
                 <Button primary>Follow</Button>
               </ProfileButtonWrap>
@@ -122,11 +122,7 @@ export function Profile() {
           </ProfileRow>
           <DesktopOnly>
             <ProfileRow>
-              <ProfileDetailUl>
-                <KeyNumber label="posts" number={722} />
-                <KeyNumber label="followers" number="25.1m" />
-                <KeyNumber label="following" number={6} />
-              </ProfileDetailUl>
+              <KeyNumbers />
             </ProfileRow>
             <ProfileDescriptions
             // class="row last"

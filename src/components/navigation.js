@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { DesktopOnly } from "../utils/mobile";
 import { Button } from "./button";
+import * as Icons from "./icons";
 
 const Logo = styled.img`
   height: 29px;
@@ -53,7 +54,8 @@ export function Navigation() {
           <Logo alt="logo" src="/images/logo.png" />
           <DesktopOnly>
             <SearchGuide>
-              <span className="search-icon"></span>
+              <Icons.Search />
+              {/* <span className="search-icon"></span> */}
               <SearchPlaceholder>Search</SearchPlaceholder>
             </SearchGuide>
           </DesktopOnly>
