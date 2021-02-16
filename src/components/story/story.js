@@ -4,6 +4,7 @@ import { DesktopOnly } from "../../utils/mobile";
 import { StoryItem } from "./story-item";
 // import * as data from "./data.json";
 import { data } from "./data";
+import * as Icons from "../icons";
 
 const Stories = styled.div`
   display: flex;
@@ -47,7 +48,8 @@ export function Story() {
 
       <NextButton>
         <DesktopOnly>
-          <div className="arrow-right-icon"></div>
+          <Icons.ArrowRight />
+          {/* <div className="arrow-right-icon"></div> */}
         </DesktopOnly>
       </NextButton>
     </Stories>
