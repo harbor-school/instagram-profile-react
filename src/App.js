@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { Gallery } from "./components/gallery";
 import { KeyNumbers } from "./components/key-numbers";
@@ -9,6 +10,9 @@ import { Tabs } from "./components/tabs";
 import "./styles.css";
 import { MobileOnly } from "./utils/mobile";
 
+const ThemeWrap = styled.div`
+  background: var(--ins-background-primary);
+`;
 const Main = styled.main`
   padding: 30px 20px 0px 20px;
   max-width: 935px;
@@ -19,8 +23,16 @@ const Main = styled.main`
 `;
 
 export default function App() {
+  const [theme, setTheme] = useState("light");
+
   return (
-    <>
+    <ThemeWrap
+      className={`__insta-${theme}-mode`}
+      onDoubleClick={() => {
+        if (theme === "light") setTheme("dark");
+        else if (theme === "dark") setTheme("light");
+      }}
+    >
       <Navigation />
       <Main>
         <Profile />
@@ -31,6 +43,6 @@ export default function App() {
         <Tabs />
         <Gallery />
       </Main>
-    </>
+    </ThemeWrap>
   );
 }
