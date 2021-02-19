@@ -6,6 +6,7 @@ const TabsWrap = styled.div`
   border-top: 1px solid var(--ins-border-primary);
   display: flex;
   justify-content: center;
+  background: var(--ins-background-primary);
   @media only screen and (max-width: 735px) {
     display: flex;
     justify-content: space-around;

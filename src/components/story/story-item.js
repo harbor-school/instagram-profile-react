@@ -6,7 +6,6 @@ const Wrap = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  background: var(--ins-background-primary);
   color: var(--ins-content-primary);
   @media only screen and (max-width: 735px) {
     padding: 0px 5px;

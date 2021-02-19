@@ -13,6 +13,7 @@ const Stories = styled.div`
   overflow-x: scroll;
   position: relative;
   margin-bottom: 44px;
+  background: var(--ins-background-primary);
   @media only screen and (max-width: 735px) {
     padding: 0;
     margin-bottom: 21px;

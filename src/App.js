@@ -8,6 +8,7 @@ import { Profile } from "./components/profile";
 import { Story } from "./components/story";
 import { Tabs } from "./components/tabs";
 import "./styles.css";
+import { ThemeSwitcher } from "./theme";
 import { MobileOnly } from "./utils/mobile";
 
 const ThemeWrap = styled.div`
@@ -26,13 +27,7 @@ export default function App() {
   const [theme, setTheme] = useState("light");
 
   return (
-    <ThemeWrap
-      className={`__insta-${theme}-mode`}
-      onDoubleClick={() => {
-        if (theme === "light") setTheme("dark");
-        else if (theme === "dark") setTheme("light");
-      }}
-    >
+    <ThemeWrap className={`__insta-${theme}-mode`}>
       <Navigation />
       <Main>
         <Profile />
@@ -43,6 +38,7 @@ export default function App() {
         <Tabs />
         <Gallery />
       </Main>
+      <ThemeSwitcher theme={theme} setTheme={setTheme} />
     </ThemeWrap>
   );
 }

@@ -7,7 +7,6 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   height: 52px;
-  background: var(--ins-background-primary);
   color: var(--ins-content-primary);
 
   ${({ active }) =>

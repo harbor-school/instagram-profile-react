@@ -5,6 +5,7 @@ const ProfileDetailLi = styled.li`
   font-size: 16px;
   font-weight: 400;
   margin-right: 40px;
+  list-style-type: none;
   @media only screen and (max-width: 735px) {
     font-size: 14px;
     font-weight: 400;

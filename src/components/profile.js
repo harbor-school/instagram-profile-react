@@ -39,7 +39,7 @@ const ProfileImg = styled.img`
   width: 150px;
   height: 150px;
   border-radius: 1000px;
-  border: 1px solid hsl(0, 0%, 86%);
+  border: 1px solid var(--ins-border-primary);
   @media only screen and (max-width: 735px) {
     width: 100%;
     height: 100%;
