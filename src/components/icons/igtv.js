@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Igtv({ fill = "#8e8e8e", size = 12 }) {
+export function Igtv({ fill = "var(--ins-content-secondary)", size = 12 }) {
   return (
     <svg
       aria-label="Igtv"

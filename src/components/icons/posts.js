@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Posts({ fill = "#262626", size = 12 }) {
+export function Posts({ fill = "var(--ins-content-secondary)", size = 12 }) {
   return (
     <svg
       aria-label="Posts"

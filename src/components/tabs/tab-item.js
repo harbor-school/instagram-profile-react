@@ -7,12 +7,16 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   height: 52px;
+  background: var(--ins-background-primary);
+  color: var(--ins-content-primary);
+
   ${({ active }) =>
     active &&
     css`
-      border-top: 1px solid hsl(0, 0%, 15%);
+      border-top: 1px solid var(--ins-content-secondary);
       margin-top: -1px;
-      color: hsl(0, 0%, 15%);
+      color: var(--ins-content-secondary);
+      color: red;
       @media only screen and (max-width: 735px) {
         border-top: none;
       }
@@ -21,7 +25,7 @@ const Wrap = styled.div`
 const Span = styled.span`
   font-size: 12px;
   font-weight: 600;
-  color: hsl(0, 0%, 56%);
+  color: var(--ins-mono-700);
   margin-left: 6px;
 `;
 
@@ -37,12 +41,26 @@ export function TabItem({ active, icon, label }) {
             marginRight: 60
           }}
         >
-          <IconComp />
+          <div className="light-theme-only">
+            <IconComp />
+          </div>
+          <div className="dark-theme-only">
+            <IconComp
+              fill={
+                active
+                  ? "var(--ins-content-primary)"
+                  : "var(--ins-content-secondary)"
+              }
+            />
+          </div>
           <Span>{label}</Span>
         </Wrap>
       </DesktopOnly>
       <MobileOnly>
-        <IconComp size={24} fill={active ? "rgb(0, 149, 246)" : "#8e8e8e"} />
+        <IconComp
+          size={24}
+          fill={active ? "var(--ins-primary)" : "var(--ins-content-secondary)"}
+        />
         {/* 
         {React.cloneElement(<IconComp />, {
           size: 24,

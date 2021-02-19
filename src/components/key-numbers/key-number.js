@@ -18,7 +18,7 @@ const ProfileDetailSpan = styled.span`
   font-weight: 600;
   @media only screen and (max-width: 735px) {
     font-weight: 600;
-    color: rgb(38, 38, 38);
+    color: var(--ins-content-primary);
     display: block;
   }
 `;

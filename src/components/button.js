@@ -10,22 +10,22 @@ const Wrap = styled.button`
 
   font-weight: 600;
   font-size: 14px;
-  color: #0095f6;
-  -webkit-text-fill-color: #0095f6;
+  color: var(--ins-primary);
+  -webkit-text-fill-color: var(--ins-primary);
   line-height: 18px;
   padding: 5px 9px;
   border-radius: 4px;
   /* ${(props) =>
     props.primary &&
     css`
-      background: #0095f6;
+      background: var(--ins-primary);
       color: white;
       -webkit-text-fill-color: white;
     `} */
   ${({ primary }) =>
     primary &&
     css`
-      background: #0095f6;
+      background: var(--ins-primary);
       color: white;
       -webkit-text-fill-color: white;
     `}

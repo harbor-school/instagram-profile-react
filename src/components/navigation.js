@@ -20,16 +20,16 @@ const NavContent = styled.div`
 `;
 const SearchGuide = styled.div`
   width: 215px;
-  background: hsl(0, 0%, 98%);
+  background: var(--ins-background-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px 26px;
   border-radius: 3px;
-  border: 1px solid hsl(0, 0%, 86%);
+  border: 1px solid var(--ins-border-primary);
 `;
 const SearchPlaceholder = styled.span`
-  color: hsl(0, 0%, 56%);
+  color: var(--ins-mono-700);
   font-size: 14px;
   margin-left: 6px;
 `;
@@ -40,8 +40,8 @@ const Fixed = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
-  border-bottom: 1px solid hsl(0, 0%, 86%);
+  background: var(--ins-background-primary);
+  border-bottom: 1px solid var(--ins-border-primary);
   z-index: 1;
 `;
 
@@ -51,7 +51,12 @@ export function Navigation() {
       <Mock></Mock>
       <Fixed>
         <NavContent>
-          <Logo alt="logo" src="/images/logo.png" />
+          <div className="light-theme-only">
+            <Logo alt="logo" src="/images/logo.png" />
+          </div>
+          <div className="dark-theme-only">
+            <Logo alt="logo" src="/images/logo-white.png" />
+          </div>
           <DesktopOnly>
             <SearchGuide>
               <Icons.Search />

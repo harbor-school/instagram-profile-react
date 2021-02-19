@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { TabItem } from "./tab-item";
 
 const TabsWrap = styled.div`
-  border-top: 1px solid hsl(0, 0%, 86%);
+  border-top: 1px solid var(--ins-border-primary);
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 735px) {
@@ -11,7 +11,7 @@ const TabsWrap = styled.div`
     justify-content: space-around;
     height: 44px;
     align-items: center;
-    border-top: 1px solid rgb(219, 219, 219);
+    border-top: 1px solid var(--ins-border-primary);
   }
 `;
 

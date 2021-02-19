@@ -6,6 +6,8 @@ const Wrap = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
+  background: var(--ins-background-primary);
+  color: var(--ins-content-primary);
   @media only screen and (max-width: 735px) {
     padding: 0px 5px;
   }
@@ -14,7 +16,7 @@ const Wrap = styled.li`
 const ImageWrap = styled.div`
   padding: 3px;
   border-radius: 1000px;
-  border: 1px solid hsl(0, 0%, 86%);
+  border: 1px solid var(--ins-border-secondary);
 `;
 const Image = styled.img`
   border-radius: 1000px;

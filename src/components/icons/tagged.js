@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export function Tagged({ fill = "#8e8e8e", size = 12 }) {
+export function Tagged({ fill = "var(--ins-content-secondary)", size = 12 }) {
   return (
     <svg
       aria-label="Tagged"

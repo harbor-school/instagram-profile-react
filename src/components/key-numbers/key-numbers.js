@@ -8,7 +8,7 @@ const ProfileDetailUl = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 12px 0;
-    border-top: 1px solid rgb(219, 219, 219);
+    border-top: 1px solid var(--ins-border-primary);
   }
 `;
 export function KeyNumbers() {

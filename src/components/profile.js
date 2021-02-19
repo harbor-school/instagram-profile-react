@@ -7,6 +7,8 @@ import * as Icons from "./icons";
 
 const Header = styled.header`
   margin-bottom: 44px;
+  background: var(--ins-background-primary);
+  color: var(--ins-content-primary);
   @media only screen and (max-width: 735px) {
     display: block;
     margin-bottom: 0px;
@@ -87,7 +89,7 @@ const ProfileDescriptionSpan = styled.span`
   }
 `;
 const ProfileDescriptionA = styled.a`
-  color: hsl(209, 100%, 21%);
+  color: var(--ins-content-blue);
 `;
 const ProfileDescriptions = styled.div`
   @media only screen and (max-width: 735px) {
