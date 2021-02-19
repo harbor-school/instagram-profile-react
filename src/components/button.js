@@ -3,6 +3,11 @@ import styled, { css } from "styled-components";
 
 const Wrap = styled.button`
   all: unset;
+  
+  box-sizing: border-box;
+  white-space: nowrap;
+
+
   font-weight: 600;
   font-size: 14px;
   color: #0095f6;
