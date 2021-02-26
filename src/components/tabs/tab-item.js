@@ -69,3 +69,9 @@ export function TabItem({ active, icon, label }) {
     </>
   );
 }
+
+TabItem.defaultProps = {
+  active: false,
+  icon: "Posts",
+  label: "POSTS"
+};

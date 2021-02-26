@@ -1,5 +1,6 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
+import * as Icons from "../icons";
 
 const Wrap = styled.div`
   position: relative;
@@ -15,13 +16,19 @@ const Icon = styled.span`
 `;
 
 export function GalleryItem({ imagePath, icon }) {
+  const IconComp = Icons[icon];
+  console.log("imagePath - GalleryItem", imagePath);
   return (
     <Wrap>
       <Img alt="gallery-post" src={imagePath} />
       <Icon>
-        {icon}
+        {icon && <IconComp />}
         {/* <span className="media-icon"></span> */}
       </Icon>
     </Wrap>
   );
 }
+GalleryItem.defaultProps = {
+  imagePath: "/images/transparent.png",
+  icon: ""
+};

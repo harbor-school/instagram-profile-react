@@ -156,3 +156,6 @@ export function Profile() {
     </Header>
   );
 }
+Profile.defaultProps = {
+  profileImage: "/images/profile-logo.jpg"
+};

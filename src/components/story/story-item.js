@@ -54,3 +54,8 @@ export function StoryItem(props) {
     </Wrap>
   );
 }
+
+StoryItem.defaultProps = {
+  imagePath: "/images/story-1.jpg",
+  title: "IDPWD"
+};

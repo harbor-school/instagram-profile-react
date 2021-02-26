@@ -39,23 +39,24 @@ const Mock = styled.div`
 const Fixed = styled.div`
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: var(--ins-background-primary);
   border-bottom: 1px solid var(--ins-border-primary);
   z-index: 1;
 `;
 
-export function Navigation() {
+export function Navigation({ lightThemeLogo, darkThemeLogo }) {
   return (
     <nav>
       <Mock></Mock>
       <Fixed>
         <NavContent>
           <div className="light-theme-only">
-            <Logo alt="logo" src="/images/logo.png" />
+            <Logo alt="logo" src={lightThemeLogo} />
           </div>
           <div className="dark-theme-only">
-            <Logo alt="logo" src="/images/logo-white.png" />
+            <Logo alt="logo" src={darkThemeLogo} />
           </div>
           <DesktopOnly>
             <SearchGuide>
@@ -73,3 +74,7 @@ export function Navigation() {
     </nav>
   );
 }
+Navigation.defaultProps = {
+  lightThemeLogo: "/images/logo.png",
+  darkThemeLogo: "/images/logo-white.png"
+};

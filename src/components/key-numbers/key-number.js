@@ -31,3 +31,8 @@ export function KeyNumber(props) {
     </ProfileDetailLi>
   );
 }
+
+KeyNumber.defaultProps = {
+  number: "722",
+  label: "posts"
+};

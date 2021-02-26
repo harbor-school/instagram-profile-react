@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styled, { css } from "styled-components";
 
 const Wrap = styled.button`
@@ -31,6 +31,19 @@ const Wrap = styled.button`
     `}
 `;
 
-export function Button({ children, primary }) {
-  return <Wrap primary={primary}>{children}</Wrap>;
+export function Button({ children, content, primary }) {
+  console.log("children", children);
+  return (
+    <Wrap primary={primary}>
+      {(children.length > 0 && children) || content}
+    </Wrap>
+  );
 }
+
+Button.defaultProps = {
+  content: "Button Label",
+  primary: false,
+  width: 104,
+  height: 28
+  // myObject: { opacity: 1, tint: "red" },
+};
