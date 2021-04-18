@@ -1,44 +1,30 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import { Gallery } from "./components/gallery";
-import { KeyNumbers } from "./components/key-numbers";
-import { Navigation } from "./components/navigation";
-import { Profile } from "./components/profile";
-import { Story } from "./components/story";
-import { Tabs } from "./components/tabs";
 import "./styles.css";
-import { ThemeSwitcher } from "./theme";
-import { MobileOnly } from "./utils/mobile";
+import { ProfilePage } from "./ProfilePage";
+import { LoginPage } from "./LoginPage";
 
 const ThemeWrap = styled.div`
   background: var(--ins-background-primary);
-`;
-const Main = styled.main`
-  padding: 30px 20px 0px 20px;
-  max-width: 935px;
-  margin: 0 auto;
-  @media only screen and (max-width: 735px) {
-    padding: 0;
-  }
 `;
 
 export default function App() {
   const [theme, setTheme] = useState("light");
 
   return (
-    <ThemeWrap className={`__insta-${theme}-mode`}>
-      <Navigation />
-      <Main>
-        <Profile />
-        <Story />
-        <MobileOnly>
-          <KeyNumbers />
-        </MobileOnly>
-        <Tabs />
-        <Gallery />
-      </Main>
-      <ThemeSwitcher theme={theme} setTheme={setTheme} />
-    </ThemeWrap>
+    <Router>
+      {/* A <Switch> looks through its children <Route>s and
+        renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/profile">
+          <ProfilePage />
+        </Route>
+        <Route path="/">
+          <LoginPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }

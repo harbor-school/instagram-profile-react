@@ -8,7 +8,6 @@ const TabsWrap = styled.div`
   justify-content: center;
   background: var(--ins-background-primary);
   @media only screen and (max-width: 735px) {
-    display: flex;
     justify-content: space-around;
     height: 44px;
     align-items: center;

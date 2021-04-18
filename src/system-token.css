@@ -14,7 +14,6 @@
   --ins-border-secondary: hsl(0, 0%, 82%);
 }
 
-__insta-dark-mode:root,
 .__insta-dark-mode {
   --ins-background-primary: hsl(0, 0%, 7%);
   --ins-background-secondary: hsl(0, 0%, 10%);

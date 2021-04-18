@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { DesktopOnly } from "../utils/mobile";
 import { Button } from "./button";
 import * as Icons from "./icons";
+import { useHistory } from "react-router-dom";
 
 const Logo = styled.img`
   height: 29px;
@@ -47,6 +48,8 @@ const Fixed = styled.div`
 `;
 
 export function Navigation({ lightThemeLogo, darkThemeLogo }) {
+  const history = useHistory();
+
   return (
     <nav>
       <Mock></Mock>
@@ -66,7 +69,9 @@ export function Navigation({ lightThemeLogo, darkThemeLogo }) {
             </SearchGuide>
           </DesktopOnly>
           <div>
-            <Button primary>Log In</Button>
+            <Button primary onClick={() => history.push("/")}>
+              Log In
+            </Button>
             <Button>Sign Up</Button>
           </div>
         </NavContent>
